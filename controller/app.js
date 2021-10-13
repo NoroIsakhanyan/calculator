@@ -86,11 +86,12 @@ const handleOperatorClick = (operation) => {
   if (!valueStrInMemory) {
     valueStrInMemory = currentValueStr;
     operatorInMemory = operation;
-    
+    setStrAsValue('0');
     return;
   }
   valueStrInMemory = getResultOfOperationAsStr();
   operatorInMemory = operation;
+  setStrAsValue('0');
 };
 
 acEl.addEventListener('click', () => {
