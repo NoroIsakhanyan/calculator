@@ -26,6 +26,7 @@
     margin-bottom: 20px;
     margin-right: 20px;
     text-align: right;
+    overflow: hidden;
   }
   
   .buttons-container {
