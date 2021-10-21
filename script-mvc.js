@@ -31,16 +31,16 @@ class CalcView {
         
     setStrAsValue = (valueStr) => {
             if (valueStr[valueStr.length - 1] === '.') {
-            this.valueEl.textContent += '.';
-            return;
+                 this.valueEl.textContent += '.';
+                  return;
             }
 
             const [wholeNumStr, decimalStr] = valueStr.split('.');
             if (decimalStr) {
-            this.valueEl.textContent =parseFloat(wholeNumStr).toLocaleString() + '.' + decimalStr;
+                 this.valueEl.textContent =parseFloat(wholeNumStr).toLocaleString() + '.' + decimalStr;
             } 
             else {
-            this.valueEl.textContent = parseFloat(wholeNumStr).toLocaleString();
+                 this.valueEl.textContent = parseFloat(wholeNumStr).toLocaleString();
             }
         }
 
@@ -68,9 +68,9 @@ class CalcView {
 
     addLisenerForNumbers(handler){
         for (let i = 0; i < this.numberElArray.length; i++) {
-            const numberEl = this.numberElArray[i];
-            numberEl.addEventListener('click', () => {
-            handler(i.toString());
+             const numberEl = this.numberElArray[i];
+                numberEl.addEventListener('click', () => {
+                    handler(i.toString());
             });
         }
     }
@@ -146,7 +146,7 @@ class CalcModel{
         return this.getNewValueAsString();
       };
 
-      clearMemory(){
+    clearMemory(){
         this.valueStrInMemory = null;
         this.operatorInMemory = null;
       }
@@ -165,10 +165,10 @@ class Controller{
         const currentValueStr = this.view.getValueAsStr();
     
         if (!this.model.getValueStrInMemory()) {
-          this.model.setValueStrInMemory(currentValueStr);
-          this.model.setOperatorInMemory(operation);
-          this.view.setStrAsValue('0');
-          return;
+              this.model.setValueStrInMemory(currentValueStr);
+              this.model.setOperatorInMemory(operation);
+              this.view.setStrAsValue('0');
+              return;
         }
         this.model.setValueStrInMemory(this.model.getResultOfOperationAsStr(this.view.getValueAsNum()));
         this.model.setOperatorInMemory(operation);
@@ -221,16 +221,14 @@ class Controller{
             else {
                 this.view.setStrAsValue(currentValueStr.substring(1));
             }
-        }
-      
-    }
+         }
+     }
 
-    run(){
+  run(){
        this.view.addLisenerForOperators(this.handleOperatorClick);
        this.view.addLisenerForNumbers(this.handleNumberClick);
        this.view.addLisenerForFunctions(this.handleFunctionClick);
-    }
-    
+    } 
 }
 
 const view = new CalcView();
