@@ -75,7 +75,7 @@ body
     grid-column: 1 / span 2;
     justify-content: flex-start;
     padding-left: 42px;
-    width: 222px;
+    width: 221px;
   }
   
 .button:active, .button:focus 
