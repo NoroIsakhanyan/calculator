@@ -22,8 +22,9 @@ body
     color: white;
     height: 693px;
     position: relative;
-    width: 445px;
-    box-shadow: 10px 10px 120px 10px gray
+    width: 447px;
+    box-shadow: 10px 10px 120px 10px gray;
+    padding-left: 2px;
   }
   
 .value 
