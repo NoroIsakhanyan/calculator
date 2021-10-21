@@ -62,7 +62,7 @@ class CalcView {
             handler('division');
         });
         this.equalEl.addEventListener('click', () => {
-            handler('equal')
+            handler('equal');
         });
     }
 
@@ -89,7 +89,7 @@ class CalcView {
             handler('AC');
         });
         this.equalEl.addEventListener('click',()=>{
-            handler('=')
+            handler('=');
         })
     }
 } 
